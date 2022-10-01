@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Tarefa from "./Tarefa";
+import { DivLista } from "../style/styled";
 
 
 const ListaFormulario = ()=>{
@@ -86,7 +86,31 @@ const ListaFormulario = ()=>{
         setFormulario(lista)
     };
 
-    
+    return (
+        <>
+            <petCadastro
+                addFormulario={addFormulario}
+                formulario={nFormulario}
+                digit={captura}
+            />
+            <DivLista>
+                {formulario.map((tar, i) =>(
+                    <formulario
+                        key={i}
+                        nome={tar.nome}
+                        idade={tar.idade}
+                        raca={tar.raca}
+                        tamanho={tar.tamanho}
+                        nomeDono={tar.nomeDono}
+                        telefoneDono={tar.telefoneDono}
+                        imagemPet={tar.imagemPet}
+                        observacoes={tar.observacoes}
+                        remove={removerTarefa.bind(this, tar)}
+                    />
+                ))}
+            </DivLista>
+        </>
+    )
 };
 
 export default ListaFormulario;
