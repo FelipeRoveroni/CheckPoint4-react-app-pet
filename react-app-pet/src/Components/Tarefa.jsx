@@ -5,7 +5,7 @@ const Tarefa = (props)=>{
     return(
         <DivLista>
             <h2>{props.nome}</h2>
-            <p></p>
+            <p>{props.idade}</p>
             <p></p>
             <p></p>
             <p></p>

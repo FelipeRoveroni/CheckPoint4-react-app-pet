@@ -8,7 +8,8 @@ export const DivLista = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-`
+`;
+
 export const DivForm = styled.div`
     width: 100%;
     form {
@@ -32,5 +33,25 @@ export const DivForm = styled.div`
             border: 1px solid gray;
             cursor: pointer;
         }
+    }
+`;
+
+export const DivTarefa = styled.div`
+    background-color: #ffb;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 5px #333;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    h2, p {
+        padding-bottom: 10px;
+    }
+    button {
+        padding: 3px 10px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        cursor: pointer;
     }
 `;

@@ -6,7 +6,8 @@ const PetCadastro = (props)=>{
         <DivForm>
             <form>
                 <div>
-                    <input type="text" name="nome" placeholder="Nome" />
+                    <input type="text" name="nome" placeholder="Nome" 
+                    />
                 </div>
             </form>
         </DivForm>
