@@ -78,7 +78,15 @@ const ListaFormulario = ()=>{
                 nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
                 observacoes:value})
         }
-    }
+    };
+
+    const removerTarefa= (tar)=>{
+        let lista = formulario
+        lista = lista.filter((t)=> t!== tar)
+        setFormulario(lista)
+    };
+
+    
 };
 
 export default ListaFormulario;
