@@ -5,7 +5,7 @@ import ListaFormularios from "./Components/ListaFormularios";
 function App(){
     return(
         <>
-        <ListaFormularios/>
+            <ListaFormularios/>
         </>
     );
 }

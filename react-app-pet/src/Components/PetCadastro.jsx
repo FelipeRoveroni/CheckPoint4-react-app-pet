@@ -1,15 +1,18 @@
 import React from "react";
-import { DivForm } from "../style/styled";
+import { DivFormulario } from "../style/styled";
 
 const PetCadastro = (props)=>{
     return(
-        <DivForm>
-            <form>
+        <DivFormulario>
+            <form action="post" onSubmit={props.addFormulario}>
                 <div>
                     <input type="text" name="nome" placeholder="Nome" 
-                    />
+                    value={props.formulario.nome} onChange={props.dgit}/>
+
                 </div>
             </form>
-        </DivForm>
+        </DivFormulario>
     )
 }
+
+export default PetCadastro;
