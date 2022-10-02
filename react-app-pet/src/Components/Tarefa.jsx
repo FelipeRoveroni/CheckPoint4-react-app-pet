@@ -1,10 +1,12 @@
 import React from "react";
-import { DivFormulario } from "../style/styled";
+import { DivTarefa } from "../style/styled";
+
 
 const Tarefa = (props)=>{
     return(
-        <DivFormulario>
-            <h2>{props.nome}</h2>
+        <DivTarefa>
+            <h2>Informacoes do pet</h2>
+            <p>{props.nome}</p>
             <p>{props.idade}</p>
             <p>{props.raca}</p>
             <p>{props.tamanho}</p>
@@ -13,7 +15,7 @@ const Tarefa = (props)=>{
             <p>{props.imagemPet}</p>
             <p>{props.observacoes}</p>
             <button onClick={props.remove}>Remover</button>
-        </DivFormulario>
+        </DivTarefa>
     )
 };
 

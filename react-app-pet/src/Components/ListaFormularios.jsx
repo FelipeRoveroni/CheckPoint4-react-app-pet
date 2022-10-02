@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { DivLista, Botao } from "../style/styled";
+import { DivLista } from "../style/styled";
 import PetCadastro from "./PetCadastro"
+import Tarefa from "./Tarefa";
 
-const ListaFormulario = ()=>{
+const Listatarefas = ()=>{
 
-    const[formulario, setFormulario] = useState([{
+    const[tarefa, setTarefa] = useState([{
         nome: 'Nome Do Pet',
         idade: 'Idade Do Pet',
         raca: 'Raca do Animal',
@@ -16,7 +17,7 @@ const ListaFormulario = ()=>{
     },
 ])
 
-    const[nFormulario, setNFormulario] = useState({
+    const[nTarefa, setNTarefa] = useState({
         nome:"",
         idade:"",
         raca:"",
@@ -27,9 +28,9 @@ const ListaFormulario = ()=>{
         observacoes:"",
     });
 
-    const addFormulario = (e)=>{
+    const addTarefa = (e)=>{
         e.preventDefault()
-        setNFormulario({
+        setNTarefa({
             nome:"",
             idade:"",
             raca:"",
@@ -39,63 +40,63 @@ const ListaFormulario = ()=>{
             imagemPet:"",
             observacoes:""
         })
-        setFormulario([...formulario, nFormulario])
+        setTarefa([...tarefa, nTarefa])
     };
 
     const captura = (e)=>{
         const {value, name} = e.target
 
         if (name === "nome"){
-            setNFormulario({nome:value, idade:nFormulario.idade, raca:nFormulario.raca, tamanho:nFormulario.tamanho,
-            nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
-            observacoes:nFormulario.observacoes})
+            setNTarefa({nome:value, idade:nTarefa.idade, raca:nTarefa.raca, tamanho:nTarefa.tamanho,
+            nomeDono:nTarefa.nomeDono, telefoneDono:nTarefa.telefoneDono, imagemPet:nTarefa.imagemPet,
+            observacoes:nTarefa.observacoes})
         } else if (name === "idade"){
-            setNFormulario({nome:nFormulario.nome, idade:value, raca:nFormulario.raca, tamanho:nFormulario.tamanho,
-                nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
-                observacoes:nFormulario.observacoes})
+            setNTarefa({nome:nTarefa.nome, idade:value, raca:nTarefa.raca, tamanho:nTarefa.tamanho,
+                nomeDono:nTarefa.nomeDono, telefoneDono:nTarefa.telefoneDono, imagemPet:nTarefa.imagemPet,
+                observacoes:nTarefa.observacoes})
         } else if (name === "raca"){
-            setNFormulario({nome:nFormulario.nome, idade:nFormulario.idade, raca:value, tamanho:nFormulario.tamanho,
-                nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
-                observacoes:nFormulario.observacoes})
+            setNTarefa({nome:nTarefa.nome, idade:nTarefa.idade, raca:value, tamanho:nTarefa.tamanho,
+                nomeDono:nTarefa.nomeDono, telefoneDono:nTarefa.telefoneDono, imagemPet:nTarefa.imagemPet,
+                observacoes:nTarefa.observacoes})
         } else if (name === "tamanho"){
-            setNFormulario({nome:nFormulario.nome, idade:nFormulario.idade, raca:nFormulario.raca, tamanho:value,
-                nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
-                observacoes:nFormulario.observacoes})
+            setNTarefa({nome:nTarefa.nome, idade:nTarefa.idade, raca:nTarefa.raca, tamanho:value,
+                nomeDono:nTarefa.nomeDono, telefoneDono:nTarefa.telefoneDono, imagemPet:nTarefa.imagemPet,
+                observacoes:nTarefa.observacoes})
         } else if (name === "nomeDono"){
-            setNFormulario({nome:nFormulario.nome, idade:nFormulario.idade, raca:nFormulario.raca, tamanho:nFormulario.tamanho,
-                nomeDono:value, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
-                observacoes:nFormulario.observacoes})
+            setNTarefa({nome:nTarefa.nome, idade:nTarefa.idade, raca:nTarefa.raca, tamanho:nTarefa.tamanho,
+                nomeDono:value, telefoneDono:nTarefa.telefoneDono, imagemPet:nTarefa.imagemPet,
+                observacoes:nTarefa.observacoes})
         } else if (name === "telefoneDono"){
-            setNFormulario({nome:nFormulario.nome, idade:nFormulario.idade, raca:nFormulario.raca, tamanho:nFormulario.tamanho,
-                nomeDono:nFormulario.nomeDono, telefoneDono:value, imagemPet:nFormulario.imagemPet,
-                observacoes:nFormulario.observacoes})
+            setNTarefa({nome:nTarefa.nome, idade:nTarefa.idade, raca:nTarefa.raca, tamanho:nTarefa.tamanho,
+                nomeDono:nTarefa.nomeDono, telefoneDono:value, imagemPet:nTarefa.imagemPet,
+                observacoes:nTarefa.observacoes})
         } else if (name === "imagemPet"){
-            setNFormulario({nome:nFormulario.nome, idade:nFormulario.idade, raca:nFormulario.raca, tamanho:nFormulario.tamanho,
-                nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:value,
-                observacoes:nFormulario.observacoes})
+            setNTarefa({nome:nTarefa.nome, idade:nTarefa.idade, raca:nTarefa.raca, tamanho:nTarefa.tamanho,
+                nomeDono:nTarefa.nomeDono, telefoneDono:nTarefa.telefoneDono, imagemPet:value,
+                observacoes:nTarefa.observacoes})
         } else if (name === "observacoes"){
-            setNFormulario({nome:nFormulario.nome, idade:nFormulario.idade, raca:nFormulario.raca, tamanho:nFormulario.tamanho,
-                nomeDono:nFormulario.nomeDono, telefoneDono:nFormulario.telefoneDono, imagemPet:nFormulario.imagemPet,
+            setNTarefa({nome:nTarefa.nome, idade:nTarefa.idade, raca:nTarefa.raca, tamanho:nTarefa.tamanho,
+                nomeDono:nTarefa.nomeDono, telefoneDono:nTarefa.telefoneDono, imagemPet:nTarefa.imagemPet,
                 observacoes:value})
         }
     };
 
     const removerTarefa= (tar)=>{
-        let lista = formulario
+        let lista = tarefa
         lista = lista.filter((t)=> t!== tar)
-        setFormulario(lista)
+        setTarefa(lista)
     };
 
     return (
         <>
-            <petCadastro
-                addFormulario={addFormulario}
-                formulario={nFormulario}
+            <PetCadastro
+                addTarefa={addTarefa}
+                tarefa={nTarefa}
                 digit={captura}
             />
             <DivLista>
-                {formulario.map((tar, i) =>(
-                    <formulario
+                {tarefa.map((tar, i) =>(
+                    <Tarefa
                         key={i}
                         nome={tar.nome}
                         idade={tar.idade}
@@ -113,4 +114,4 @@ const ListaFormulario = ()=>{
     )
 };
 
-export default ListaFormulario;
+export default Listatarefas;

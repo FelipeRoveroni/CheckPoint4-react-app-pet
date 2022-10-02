@@ -7,23 +7,50 @@ export const DivLista = styled.div`
     background-color: #ccc;
     display: flex; flex-wrap: wrap;
     justify-content: space-around;
-`
+`;
 
-export const DivFormulario = styled.div`
+export const DivTarefa = styled.div`
     background-color: #ffb;
     border: 2px solid #333;
     box-shadow: 5px 5px 5px #333;
     padding: 20px;
     text-align: center;
-    width: 350px;
-    height: 200px;
+    width: auto;
+    height: 400px;
     margin: 10px;
-    h2,p{ padding-bottom: 10px; }
-`
+    h2, p {
+        padding-bottom: 10px;
+    }
+    button {
+        padding: 3px 10px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        cursor: pointer;
+    }
+`;
 
-export const Botao = styled.button`
-    border-radius: 5px;
-    padding: 4vh 2vw;
-    margin: auto;
-    display: block;
-`
+export const DivForm = styled.div`
+    width: 100%;
+    form {
+        max-width: 300px;
+        margin: 20px auto;
+        input[type='text'],
+        textarea {
+            width: 100%;
+            margin-bottom: 7px;
+            padding-left: 5px;
+            height: 25px;
+        }
+        textarea {
+            height: 70px;
+            padding: 7px;
+        }
+        button {
+            width: 100%;
+            padding: 5px 0;
+            border-radius: 10px;
+            border: 1px solid gray;
+            cursor: pointer;
+        }
+    }
+`;
