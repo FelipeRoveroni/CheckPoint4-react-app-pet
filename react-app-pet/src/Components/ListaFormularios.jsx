@@ -6,14 +6,14 @@ import Tarefa from "./Tarefa";
 const Listatarefas = ()=>{
 
     const[tarefa, setTarefa] = useState([{
-        nome: 'Nome Do Pet',
-        idade: 'Idade Do Pet',
+        nome: 'Nome do Pet',
+        idade: 'Idade do Pet',
         raca: 'Raca do Animal',
-        tamanho: 'Tamanho Do Animal',
-        nomeDono: 'Nome Do Dono',
-        telefoneDono: 'Telefone Do Dono',
-        imagemPet: 'imagem Do Pet',
-        observacoes: 'Observacoes Do pet',
+        tamanho: 'Tamanho do Animal',
+        nomeDono: 'Nome do Dono',
+        telefoneDono: 'Telefone do Dono',
+        imagemPet: 'imagem do Pet',
+        observacoes: 'Observacoes do pet',
     },
 ])
 
