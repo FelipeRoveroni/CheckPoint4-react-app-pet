@@ -42,6 +42,10 @@ const PetCadastro = (props)=>{
                     />
                 </div>
                 <div>
+                    <textarea cols="30" rows="10" name="observacoes" placeholder="Observacoes"
+                    value={props.tarefa.observacoes} onChange={props.digit}></textarea>
+                </div>
+                <div>
                     <button type="submit">Adicionar</button>
                 </div>
             </form>
