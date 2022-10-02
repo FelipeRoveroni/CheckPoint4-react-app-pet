@@ -18,7 +18,7 @@ const PetCadastro = (props)=>{
                     value={props.tarefa.raca} onChange={props.digit}/>
                 </div>
                 <div>
-                    <input type="text" name="tamanho" placeholder="Tamanho" 
+                    <input type="text" name="tamanho" placeholder="Tamanho (Em CM)" 
                     value={props.tarefa.tamanho} onChange={props.digit}/>
                 </div>
                 <div>
@@ -26,7 +26,7 @@ const PetCadastro = (props)=>{
                     value={props.tarefa.nomeDono} onChange={props.digit}/>
                 </div>
                 <div>
-                    <input type="text" name="telefoneDono" placeholder="Telefone Do Dono" 
+                    <input type="number" name="telefoneDono" placeholder="Telefone Do Dono" 
                     value={props.tarefa.telefoneDono} onChange={props.digit}/>
                 </div>
                 <div>
